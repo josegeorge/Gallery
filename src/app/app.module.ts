@@ -6,12 +6,15 @@ import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { ImageService } from './services/image.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    GalleryComponent
+    GalleryComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     FormsModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
